@@ -1,0 +1,19 @@
+<div class="calibrate">
+	<button type="button" class="btn"
+		ng-click="(
+			$ctrl.status === 'calibrating' ? $ctrl.finish() : $ctrl.calibrate()
+		)"
+		ng-class="{
+			'btn-warning': $ctrl.status !== 'calibrating',
+			'btn-success': $ctrl.status === 'calibrating'
+		}">
+		<span>
+			{{$ctrl.status === 'calibrating' ? 'Finish' : 'Calibrate'}} 
+			<i class="fa"
+				ng-class="{
+					'fa-gears': $ctrl.status !== 'calibrating',
+					'fa-check': $ctrl.status === 'calibrating'
+				}"></i>
+		</span>
+	</button>
+</div>

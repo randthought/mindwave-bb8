@@ -1,0 +1,28 @@
+<div class="connect">
+	<form class="form-horizontal">
+		<div class="form-group">
+			<div class="col-xs-9">
+				<input type="text" class="form-control" placeholder="BLE address"
+						ng-model="$ctrl.address"
+						ng-disabled="$ctrl.isFormDisabled()"/>
+			</div>
+			<div class="col-xs-3">
+				<button type="submit" class="btn"
+						ng-click="$ctrl.connect()"
+						ng-disabled="!$ctrl.address.length || $ctrl.isFormDisabled()">
+
+					<span ng-show="$ctrl.status === ''">Connect</span>
+					
+					<span ng-show="(
+							$ctrl.status === 'connecting' ||
+							$ctrl.status === 'connected' ||
+							$ctrl.status === 'disconnected'
+						  )">Connecting <i class="fa fa-spinner fa-spin"></i></span>
+
+					<span ng-show="$ctrl.status === 'error'">
+						Retry <i class="fa fa-refresh"></i></span>
+				</button>
+			</div>
+		</div>
+	</form>
+</div>

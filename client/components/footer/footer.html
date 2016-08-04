@@ -1,0 +1,15 @@
+<div class="container text-right">
+	<a href="https://www.i4s.com/">i4s</a>
+
+	<script>
+		var ws = new WebSocket('ws://localhost:9001');
+			ws.onmessage = function (event) {
+				console.info("Message from user", event.data);
+			};
+
+		//send something
+		setTimeout(function () {
+			ws.send('I\'m from client!');
+		}, 1000);
+	</script>
+</div>
