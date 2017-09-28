@@ -1,5 +1,11 @@
 # euro-python16
 
+## Authors
+
+Developed by:
+ - Mehrad Heidar (@mehradh)
+ - Adrian Cepillo (@adriancm)
+
 This project was generated with the [Angular Full-Stack Generator](https://github.com/DaftMonk/generator-angular-fullstack) version 3.7.6.
 
 ## Getting Started
